@@ -1,7 +1,22 @@
-export const imoveis = [
+export type Imovel = {
+  id: number;
+  tipo: string;
+  imagem: string;
+  titulo: string;
+  local: string;
+  negocio: "Comprar" | "Alugar";
+  preco: string;
+  quartos: number;
+  banheiros: number;
+  area: number;
+  descricao: string;
+};
+
+export const imoveis: Imovel[] = [
   {
     id: 1,
     tipo: "Casa",
+    imagem: "",
     titulo: "Casa contemporânea com jardim",
     local: "Resende, RJ",
     negocio: "Comprar",
@@ -12,9 +27,11 @@ export const imoveis = [
     descricao:
       "Uma casa contemporânea, confortável e iluminada, pensada para quem procura espaço, tranquilidade e praticidade em um só lugar.",
   },
+
   {
     id: 2,
     tipo: "Apartamento",
+    imagem: "",
     titulo: "Apartamento moderno com varanda",
     local: "Volta Redonda, RJ",
     negocio: "Comprar",
@@ -25,9 +42,11 @@ export const imoveis = [
     descricao:
       "Apartamento moderno e bem localizado, com ambientes aconchegantes e uma varanda perfeita para aproveitar o dia.",
   },
+
   {
     id: 3,
     tipo: "Casa",
+    imagem: "",
     titulo: "Casa espaçosa em condomínio",
     local: "Barra Mansa, RJ",
     negocio: "Comprar",
@@ -38,9 +57,11 @@ export const imoveis = [
     descricao:
       "Casa ampla em condomínio tranquilo, ideal para famílias que procuram conforto, segurança e bastante espaço.",
   },
+
   {
     id: 4,
     tipo: "Apartamento",
+    imagem: "",
     titulo: "Apartamento elegante com varanda",
     local: "Resende, RJ",
     negocio: "Alugar",
@@ -55,6 +76,7 @@ export const imoveis = [
   {
     id: 5,
     tipo: "Casa",
+    imagem: "",
     titulo: "Casa charmosa em bairro tranquilo",
     local: "Volta Redonda, RJ",
     negocio: "Alugar",
@@ -64,4 +86,5 @@ export const imoveis = [
     area: 145,
     descricao:
       "Casa aconchegante em uma região tranquila, com espaços amplos e uma atmosfera perfeita para viver com conforto.",
-  },];
+  },
+];
