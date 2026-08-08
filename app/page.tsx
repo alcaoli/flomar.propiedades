@@ -155,13 +155,13 @@ className="group cursor-pointer bg-white rounded-3xl p-3 pb-6 shadow-sm hover:sh
 
              <div className="h-72 rounded-2xlbg-[#BAAA97]/20 mb-5 overflow-hidden">
 
-  {imovel.imagem ? (
-    <img
-      src={imovel.imagem}
-      alt={imovel.titulo}
-      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-    />
-  ) : (
+  {imovel.imagens.length > 0 ? (
+  <img
+    src={imovel.imagens[0]}
+    alt={imovel.titulo}
+    className="w-full h-full object-cover"
+  />
+) : (
     <div className="w-full h-full flex items-center justify-center text-[#B8A58E] text-sm">
       Foto do imóvel
     </div>

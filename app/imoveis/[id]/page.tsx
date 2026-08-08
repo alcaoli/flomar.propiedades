@@ -1,4 +1,5 @@
 import { imoveis } from "../../dados/imoveis";
+import GaleriaImovel from "./galeriaImovel";
 
 type Props = {
   params: Promise<{
@@ -13,9 +14,8 @@ export default async function Imovel({ params }: Props) {
 
   if (!imovel) {
     return (
-      <main className="min-h-screen bg-[#163191] text-[#F4EFE9]">
-        <div className="max-w-5xl mx-auto px-8 py-24">
-
+      <main className="min-h-screen bg-[#191714] text-[#F4EFE9]">
+        <div className="max-w-5xl mx-auto px-8 py-20">
           <p className="text-sm uppercase tracking-[0.2em] text-[#BAAA97]">
             Flomar Propiedades
           </p>
@@ -34,19 +34,15 @@ export default async function Imovel({ params }: Props) {
           >
             Voltar para imóveis
           </a>
-
         </div>
       </main>
     );
   }
 
   return (
-    <main className="min-h-screen bg-[#163191] text-[#F4EFE9]">
-
+    <main className="min-h-screen bg-[#191714] text-[#F4EFE9]">
       {/* HEADER */}
-
       <header className="max-w-7xl mx-auto px-8 py-7 flex items-center justify-between">
-
         <a
           href="/"
           className="text-2xl font-bold tracking-tight"
@@ -55,7 +51,6 @@ export default async function Imovel({ params }: Props) {
         </a>
 
         <nav className="hidden md:flex items-center gap-8 text-sm">
-
           <a
             href="/?tipo=Comprar"
             className="hover:text-[#BAAA97] transition"
@@ -83,16 +78,11 @@ export default async function Imovel({ params }: Props) {
           >
             Sobre nós
           </a>
-
         </nav>
-
       </header>
 
-
       {/* CONTEÚDO */}
-
       <section className="max-w-5xl mx-auto px-8 py-20">
-
         <a
           href="/imoveis"
           className="text-sm text-[#F4EFE9]/60 hover:text-[#BAAA97] transition"
@@ -100,11 +90,8 @@ export default async function Imovel({ params }: Props) {
           ← Voltar para imóveis
         </a>
 
-
         {/* TÍTULO */}
-
         <div className="mt-12">
-
           <p className="text-sm uppercase tracking-[0.2em] text-[#BAAA97]">
             {imovel.tipo}
           </p>
@@ -116,45 +103,18 @@ export default async function Imovel({ params }: Props) {
           <p className="text-lg text-[#F4EFE9]/65 mt-4">
             {imovel.local}
           </p>
-
         </div>
 
-
-        {/* IMAGEM */}
-
-        <div className="mt-12 h-96 md:h-[520px] rounded-3xl bg-[#191714] border border-[#F4EFE9]/10 overflow-hidden">
-
-          {imovel.imagem ? (
-
-            <img
-              src={imovel.imagem}
-              alt={imovel.titulo}
-              className="w-full h-full object-cover"
-            />
-
-          ) : (
-
-            <div className="w-full h-full flex flex-col items-center justify-center text-[#BAAA97]">
-
-              <span className="text-sm uppercase tracking-[0.2em]">
-                Flomar Propiedades
-              </span>
-
-              <span className="text-sm text-[#F4EFE9]/30 mt-2">
-                Foto do imóvel
-              </span>
-
-            </div>
-
-          )}
-
+        {/* GALERIA */}
+        <div className="mt-12">
+          <GaleriaImovel
+            imagens={imovel.imagens}
+            titulo={imovel.titulo}
+          />
         </div>
-
 
         {/* PREÇO */}
-
         <div className="mt-10">
-
           <p className="text-sm text-[#F4EFE9]/50">
             Valor do imóvel
           </p>
@@ -162,16 +122,11 @@ export default async function Imovel({ params }: Props) {
           <p className="text-3xl md:text-4xl font-semibold mt-2 text-[#BAAA97]">
             {imovel.preco}
           </p>
-
         </div>
 
-
         {/* CARACTERÍSTICAS */}
-
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
-
           <div className="bg-[#191714] border border-[#F4EFE9]/10 rounded-2xl p-6">
-
             <p className="text-3xl font-semibold">
               {imovel.quartos}
             </p>
@@ -179,12 +134,9 @@ export default async function Imovel({ params }: Props) {
             <p className="text-sm text-[#F4EFE9]/50 mt-1">
               Quartos
             </p>
-
           </div>
 
-
           <div className="bg-[#191714] border border-[#F4EFE9]/10 rounded-2xl p-6">
-
             <p className="text-3xl font-semibold">
               {imovel.banheiros}
             </p>
@@ -192,12 +144,9 @@ export default async function Imovel({ params }: Props) {
             <p className="text-sm text-[#F4EFE9]/50 mt-1">
               Banheiros
             </p>
-
           </div>
 
-
           <div className="bg-[#191714] border border-[#F4EFE9]/10 rounded-2xl p-6">
-
             <p className="text-3xl font-semibold">
               {imovel.area}m²
             </p>
@@ -205,16 +154,11 @@ export default async function Imovel({ params }: Props) {
             <p className="text-sm text-[#F4EFE9]/50 mt-1">
               Área
             </p>
-
           </div>
-
         </div>
 
-
         {/* DESCRIÇÃO */}
-
         <div className="mt-16 max-w-2xl">
-
           <p className="text-sm uppercase tracking-[0.2em] text-[#BAAA97]">
             Sobre este imóvel
           </p>
@@ -226,32 +170,25 @@ export default async function Imovel({ params }: Props) {
           <p className="mt-6 text-[#F4EFE9]/65 leading-8">
             {imovel.descricao}
           </p>
-
         </div>
 
-
         {/* CTA */}
-<div className="mt-12">
-
-  <a
-    href={`https://wa.me/5524999668881?text=${encodeURIComponent(
-      `Olá! Tenho interesse no imóvel "${imovel.titulo}", localizado em ${imovel.local}. Gostaria de saber mais informações.`
-    )}`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block bg-[#BAAA97] text-[#191714] rounded-full px-8 py-4 font-medium hover:bg-[#F4EFE9] transition"
-  >
-    Tenho interesse
-  </a>
-  
-</div>
+        <div className="mt-12">
+          <a
+            href={`https://wa.me/5524999668881?text=${encodeURIComponent(
+              `Olá! Tenho interesse no imóvel "${imovel.titulo}", localizado em ${imovel.local}. Gostaria de saber mais informações.`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#BAAA97] text-[#191714] rounded-full px-8 py-4 font-medium hover:bg-[#F4EFE9] transition"
+          >
+            Tenho interesse
+          </a>
+        </div>
       </section>
 
-
       {/* FOOTER */}
-
       <footer className="border-t border-[#F4EFE9]/10 px-8 py-10 flex flex-col md:flex-row justify-between gap-4 text-sm text-[#F4EFE9]/50">
-
         <p>
           © 2026 Flomar Propiedades. Todos os direitos reservados.
         </p>
@@ -259,9 +196,7 @@ export default async function Imovel({ params }: Props) {
         <p>
           Seu próximo capítulo começa aqui.
         </p>
-
       </footer>
-
     </main>
   );
 }

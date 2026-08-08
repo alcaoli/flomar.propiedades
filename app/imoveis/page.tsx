@@ -243,15 +243,15 @@ export default function Imoveis() {
 
                   <div className="h-72 rounded-2xl bg-[#BAAA97]/20 overflow-hidden">
 
-                    {imovel.imagem ? (
+                  {imovel.imagens.length > 0 ? (
 
-                      <img
-                        src={imovel.imagem}
-                        alt={imovel.titulo}
-                        className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                      />
+  <img
+    src={imovel.imagens[0]}
+    alt={imovel.titulo}
+    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+  />
 
-                    ) : (
+) : (
 
                       <div className="w-full h-full flex items-center justify-center text-[#191714]/40 text-sm">
                         Foto do imóvel

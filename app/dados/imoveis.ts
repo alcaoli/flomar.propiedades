@@ -1,7 +1,7 @@
 export type Imovel = {
   id: number;
   tipo: string;
-  imagem: string;
+  imagens: string[];
   titulo: string;
   local: string;
   negocio: "Comprar" | "Alugar";
@@ -20,7 +20,16 @@ export const imoveis: Imovel[] = [
   {
     id: 1,
     tipo: "Casa",
-    imagem: "",
+    imagens: [
+      "/imoveis/flomar/casa-alphaville-1550/casa-01.jpg",
+      "/imoveis/flomar/casa-alphaville-1550/casa-02.jpg",
+      "/imoveis/flomar/casa-alphaville-1550/casa-03.jpg",
+      "/imoveis/flomar/casa-alphaville-1550/casa-04.jpg",
+      "/imoveis/flomar/casa-alphaville-1550/casa-05.jpg",
+      "/imoveis/flomar/casa-alphaville-1550/casa-06.jpg",
+      "/imoveis/flomar/casa-alphaville-1550/casa-07.jpg",
+      "/imoveis/flomar/casa-alphaville-1550/casa-08.jpg",
+    ],
     titulo: "Casa nova de alto padrão no Alphaville",
     local: "Alphaville Resende, Resende - RJ",
     negocio: "Comprar",
@@ -39,7 +48,16 @@ export const imoveis: Imovel[] = [
   {
     id: 2,
     tipo: "Casa",
-    imagem: "",
+    imagens: [
+      "/imoveis/flomar/casa-alphaville-1050/casa-01.jpg",
+      "/imoveis/flomar/casa-alphaville-1050/casa-02.jpg",
+      "/imoveis/flomar/casa-alphaville-1050/casa-03.jpg",
+      "/imoveis/flomar/casa-alphaville-1050/casa-04.jpg",
+      "/imoveis/flomar/casa-alphaville-1050/casa-05.jpg",
+      "/imoveis/flomar/casa-alphaville-1050/casa-06.jpg",
+      "/imoveis/flomar/casa-alphaville-1050/casa-07.jpg",
+      "/imoveis/flomar/casa-alphaville-1050/casa-08.jpg",
+    ],
     titulo: "Casa sofisticada com 3 suítes no Alphaville",
     local: "Alphaville Resende, Resende - RJ",
     negocio: "Comprar",
@@ -57,7 +75,16 @@ export const imoveis: Imovel[] = [
   {
     id: 3,
     tipo: "Casa",
-    imagem: "",
+    imagens: [
+      "/imoveis/flomar/casa-alphaville-1380/casa-01.jpg",
+      "/imoveis/flomar/casa-alphaville-1380/casa-02.jpg",
+      "/imoveis/flomar/casa-alphaville-1380/casa-03.jpg",
+      "/imoveis/flomar/casa-alphaville-1380/casa-04.jpg",
+      "/imoveis/flomar/casa-alphaville-1380/casa-05.jpg",
+      "/imoveis/flomar/casa-alphaville-1380/casa-06.jpg",
+      "/imoveis/flomar/casa-alphaville-1380/casa-07.jpg",
+      "/imoveis/flomar/casa-alphaville-1380/casa-08.jpg",
+    ],
     titulo: "Casa contemporânea com amplo espaço no Alphaville",
     local: "Alphaville Resende, Resende - RJ",
     negocio: "Comprar",
