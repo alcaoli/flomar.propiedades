@@ -1,46 +1,62 @@
+
 export default function Sobre() {
   return (
-    <main className="min-h-screen bg-[#163191] text-[#F4EFE9]">
+    <main className="bg-[#191714] min-h-screen text-[#F4EFE9]">
+    
+{/* HEADER */}
+<header className="w-full bg-[#191714]">
 
-      <header className="max-w-7xl mx-auto px-8 py-7 flex items-center justify-between">
-        <a
-          href="/"
-          className="text-2xl font-bold tracking-tight"
-        >
-          flomar <span className="text-[#BAAA97]">propiedades</span>
-        </a>
+  {/* IMAGEM */}
+  <div className="w-full">
+    <img
+      src="/imoveis/flomar/flomar/header-flomar.jpeg"
+      alt="Flomar Propiedades"
+      className="w-full h-auto block"
+    />
+  </div>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm">
-          <a
-            href="/?tipo=Comprar"
-            className="hover:text-[#BAAA97] transition"
-          >
-            Comprar
-          </a>
+  {/* MENU */}
+  <nav className="w-full border-b border-[#F4EFE9]/10">
+    <div className="max-w-7xl mx-auto px-8 py-6 flex items-center justify-center gap-10 text-sm">
 
-          <a
-            href="/?tipo=Alugar"
-            className="hover:text-[#BAAA97] transition"
-          >
-            Alugar
-          </a>
+      <a
+        href="/?tipo=Comprar"
+        className="text-[#F4EFE9]/70 hover:text-[#BAAA97] transition"
+      >
+        Comprar
+      </a>
 
-          <a
-            href="/imoveis"
-            className="hover:text-[#BAAA97] transition"
-          >
-            Imóveis
-          </a>
+<span className="h-4 w-px bg-[#BAAA97]/30"></span>
+      <a
+        href="/?tipo=Alugar"
+        className="text-[#F4EFE9]/70 hover:text-[#BAAA97] transition"
+      >
+        Alugar
+      </a>
 
-          <a
-            href="/sobre"
-            className="text-[#BAAA97]"
-          >
-            Sobre nós
-          </a>
-        </nav>
-      </header>
+<span className="h-4 w-px bg-[#BAAA97]/30"></span>
+      <a
+        href="/imoveis"
+        className="text-[#F4EFE9]/70 hover:text-[#BAAA97] transition"
+      >
+        Imóveis
+      </a>
 
+      <span className="h-4 w-px bg-[#BAAA97]/30"></span>
+
+      <a
+        href="/sobre"
+        className="text-[#BAAA97]"
+      >
+        Sobre nós
+      </a>
+
+    </div>
+  </nav>
+
+</header>
+
+      {/* INTRODUÇÃO */}
       <section className="max-w-7xl mx-auto px-8 pt-24 pb-28">
         <p className="text-sm uppercase tracking-[0.25em] text-[#BAAA97] mb-6">
           Sobre nós
@@ -60,6 +76,7 @@ export default function Sobre() {
         </p>
       </section>
 
+      {/* NOSSA FORMA DE TRABALHAR */}
       <section className="bg-[#191714] py-24">
         <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
 
@@ -93,6 +110,7 @@ export default function Sobre() {
         </div>
       </section>
 
+      {/* NOSSO PROPÓSITO */}
       <section className="bg-[#163191] max-w-7xl mx-auto px-8 py-28">
         <div className="max-w-3xl">
 
@@ -114,6 +132,7 @@ export default function Sobre() {
         </div>
       </section>
 
+      {/* FOOTER */}
       <footer className="border-t border-[#F4EFE9]/10 px-8 py-10 flex flex-col md:flex-row justify-between gap-4 text-sm text-[#F4EFE9]/50">
         <p>
           © 2026 Flomar Propiedades. Todos os direitos reservados.
@@ -123,7 +142,6 @@ export default function Sobre() {
           Seu próximo capítulo começa aqui.
         </p>
       </footer>
-
     </main>
   );
 }

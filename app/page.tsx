@@ -29,41 +29,44 @@ useEffect(() => {
   return (
     <main className="min-h-screen bg-[#163191] text-[#F4EFE9]">
 
+{/* HEADER */}
+<header className="relative w-full">
+  <img
+    src="/imoveis/flomar/flomar/header-flomar.jpeg"
+    alt="Flomar Propiedades"
+    className="w-full h-auto block"
+  />
 
-      {/* HEADER */}
-      <header className="max-w-7xl mx-auto px-8 py-7 flex items-center justify-between">
-        <div className="text-2xl font-bold tracking-tight text-[#F4EFE9]">
-  flomar <span className="text-[#BAAA97]">propiedades</span>
-</div>
+  <nav className="absolute top-0 right-0 px-8 py-7 flex items-center gap-8 text-sm">
+    <button
+      onClick={() => setTipoNegocio("Comprar")}
+      className="hover:text-[#BAAA97] transition"
+    >
+      Comprar
+    </button>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm">
-         <button
-  onClick={() => setTipoNegocio("Comprar")}
-  className="hover:text-[#BAAA97] transition"
->
-  Comprar
-</button>
+    <button
+      onClick={() => setTipoNegocio("Alugar")}
+      className="hover:text-[#BAAA97] transition"
+    >
+      Alugar
+    </button>
 
-         <button
-  onClick={() => setTipoNegocio("Alugar")}
-  className="hover:text-[#BAAA97] transition"
->
-  Alugar
-</button>
-          <a
-  href="/sobre"
-  className="hover:text-[#BAAA97] transition"
->
-  Sobre nós
-</a>
+    <a
+      href="/sobre"
+      className="hover:text-[#BAAA97] transition"
+    >
+      Sobre nós
+    </a>
 
-          <button className="border border-[#BAAA97] text-[#BAAA97] rounded-full px-5 py-2 hover:bg-[#BAAA97] hover:text-white transition">
-            Entrar
-          </button>
-        </nav>
-      </header>
+    <button className="border border-[#BAAA97] text-[#BAAA97] rounded-full px-5 py-2 hover:bg-[#BAAA97] hover:text-white transition">
+      Entrar
+    </button>
+  </nav>
+</header>
 
-      {/* HERO */}
+{/* HERO */}
+
       <section className="max-w-7xl mx-auto px-8 pt-20 pb-24">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.25em] text-[#BAAA97] mb-6">

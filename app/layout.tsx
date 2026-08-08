@@ -11,6 +11,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Flomar Propiedades",
   description: "Encontre seu próximo imóvel com a Flomar Propiedades.",
+  icons: {
+    icon: "/imoveis/flomar/flomar/icon-flomar.jpeg",
+  },
 };
 
 export default function RootLayout({
