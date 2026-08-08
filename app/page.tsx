@@ -186,13 +186,7 @@ className="group cursor-pointer bg-white rounded-3xl p-3 pb-6 shadow-sm hover:sh
 
                   <p className="font-semibold mt-3 text-[#191714] text-lg">
                     {imovel.preco}
-                  </p> <a
-  href={`/imoveis/${imovel.id}`}
-  className="inline-block mt-4 text-sm font-medium underline underline-offset-4 hover:text-[#163191] transition"
->
-  Ver imóvel →
-</a>
-
+                  </p>
                 </article>
 
               ))}

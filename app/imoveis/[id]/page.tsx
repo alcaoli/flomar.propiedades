@@ -155,7 +155,31 @@ export default async function Imovel({ params }: Props) {
               Área
             </p>
           </div>
-        </div>
+        </div>    {/* LOCALIZAÇÃO */}
+    <div className="mt-12 bg-[#191714] border border-[#F4EFE9]/10 rounded-3xl p-8">
+
+      <p className="text-sm uppercase tracking-[0.2em] text-[#BAAA97]">
+        Localização
+      </p>
+
+      <h2 className="text-2xl font-medium mt-3">
+        Alphaville Resende
+      </h2>
+
+      <p className="text-sm text-[#F4EFE9]/60 mt-2">
+        Resende - RJ
+      </p>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Alphaville+Resende,+Parque+Ipiranga,+Resende+-+RJ"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-6 bg-[#BAAA97] text-[#191714] rounded-full px-6 py-3 text-sm font-medium hover:bg-[#F4EFE9] transition"
+      >
+        Ver localização no Google Maps →
+      </a>
+
+    </div>
 
         {/* DESCRIÇÃO */}
         <div className="mt-16 max-w-2xl">

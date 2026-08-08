@@ -46,7 +46,7 @@ export default function Sobre() {
           Sobre nós
         </p>
 
-        <h1 className="max-w-5xl text-5xl md:text-7xl font-serif font-medium tracking-tight leading-[1.05]">
+        <h1 className="max-w-5xl text-5xl md:text-7xl font-montserrat font-medium tracking-tight leading-[1.05]">
           Mais do que encontrar uma casa.
           <br />
           Encontrar um lugar para{" "}
